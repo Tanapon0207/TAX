@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="box">
+        <div></div>
+
+        <h1 class="name"> calculator tax</h1><br/>
+
+
+         <P> input ราคาก่อน VAT </P>
+        <p><input type="text" id="num1" ></p> 
+        <div class="input-group-addon">บาท</div><br/>
+
+        <!--<p>input vat%</p>
+        <p><input type="text" id="num2" ></p> 
+        <div class="input-group-addon">vat%</div><br/>-->
+
+        <button id="btncalculate">คำนวณ</button>
+        
+        
+    </div>
+    <p><span id="result"></span></p>
+    <script>
+         
+        $("#btncalculate").click(() => {
+            var n = $("#num1").val();
+            
+            $("#num1").val("");
+          
+            x = parseInt(n)*0.07
+
+            $("#result").text(x);
+            alert(x);
+            alert(x.toFixed(2));
+        });
+    </script>
+    
+</body>
+</html>
